@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as L from 'leaflet';
+import { Marker } from 'leaflet';
 
 @Component({
   selector: 'app-home',

@@ -3,13 +3,44 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
   <ion-toolbar>
-    <ion-title>
-      Leaflet Map
-    </ion-title>
+    <!-- Pindahkan judul di atas peta -->
   </ion-toolbar>
 </ion-header>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+<!-- Tambahkan div container untuk peta dan judul -->
+<div class="map-container">
+  <ion-content id="mapId" style="height: 100%; width: 100%;" [fullscreen]="true"></ion-content>
+  <div class="map-title">
+    <ion-title>
+      Leaflet Map
+    </ion-title>
+  </div>
+</div>
 
-<ion-content id="mapId" style="height: 100%; width: 100%;" [fullscreen]="true"></ion-content>
+<style>
+  /* CSS untuk mengatur tampilan */
+  .map-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .map-title {
+    position: absolute;
+    top: 10px;
+    /* Sesuaikan dengan jarak vertikal yang Anda inginkan */
+    left: 10px;
+    /* Sesuaikan dengan jarak horizontal yang Anda inginkan */
+    z-index: 1000;
+    /* Pastikan judul ada di atas peta */
+    background-color: white;
+    /* Atur latar belakang sesuai kebutuhan */
+    padding: 5px 10px;
+    /* Sesuaikan dengan padding yang Anda inginkan */
+    border-radius: 5px;
+    /* Sesuaikan dengan radius sudut yang Anda inginkan */
+    font-weight: bold;
+  }
+</style>

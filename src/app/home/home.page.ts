@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import * as L from 'leaflet';
-import { Marker } from 'leaflet';
 
 @Component({
   selector: 'app-home',
@@ -50,7 +49,7 @@ export class HomePage {
 
     L.marker([51.5, -0.09])
       .addTo(this.map)
-      .bindPopup('Titik 1')
+      .bindPopup('Titik Lokasi 1')
       .openPopup();
   }
 }
